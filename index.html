@@ -28,26 +28,53 @@
     <!-- ==================== TOP HEADER ==================== -->
     <header class="top-header">
       <a href="#top" class="brand-lockup" aria-label="Quulay eshik romlari">
-        <span class="brand-wordmark">
-          <span class="brand-q">Q</span>uulay
+        <span class="brand-logo-row">
+          <svg class="brand-mark-svg" viewBox="0 0 64 60" width="34" height="32" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="quulayMarkGrad" x1="4" y1="54" x2="60" y2="4" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0E5B94" />
+                <stop offset="52%" stop-color="#1CA69A" />
+                <stop offset="100%" stop-color="#B3DC46" />
+              </linearGradient>
+            </defs>
+            <path d="M14 4h36c6.627 0 12 5.373 12 12v22c0 6.627-5.373 12-12 12H23.5L11.8 58.6c-1.1.8-2.6-.15-2.3-1.48L11.2 49.4C5.9 48.2 2 43.5 2 38V16C2 9.373 7.373 4 14 4Z" fill="url(#quulayMarkGrad)"/>
+            <path d="M19.5 27.5L28 35.8L45.5 18.2" stroke="#FFFFFF" stroke-width="6.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text-col">
+            <span class="brand-wordmark">quulay</span>
+            <span class="brand-sub" id="brandSubtitle">eshik romlari</span>
+          </span>
         </span>
-        <span class="brand-sub" id="brandSubtitle">eshik romlari</span>
       </a>
 
-      <a href="tel:+998901234567" class="header-phone" id="headerPhone">
+      <a href="tel:+998944792521" class="header-phone" id="headerPhone">
         <span class="phone-icon-wrap" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
             <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
           </svg>
         </span>
-        <span class="phone-number-text" id="headerPhoneText">+998 90 123 45 67</span>
+        <span class="phone-number-text" id="headerPhoneText">+998 94 479 25 21</span>
       </a>
     </header>
+
+    <!-- Compact 2-Design Theme Switcher -->
+    <div class="theme-switcher-bar">
+      <div class="theme-switcher" role="group" aria-label="Dizayn rangini tanlang">
+        <button type="button" class="theme-opt active" data-set-theme="orange" aria-pressed="true">
+          <span class="ts-dot ts-dot-orange" aria-hidden="true"></span>
+          <span>1-dizayn</span>
+        </button>
+        <button type="button" class="theme-opt" data-set-theme="brand" aria-pressed="false">
+          <span class="ts-dot ts-dot-brand" aria-hidden="true"></span>
+          <span>2-dizayn (Logo)</span>
+        </button>
+      </div>
+    </div>
 
     <main id="top">
       <!-- ==================== HERO SECTION ==================== -->
       <section class="hero-section">
-        <!-- Decorative glowing orbital arc (matches reference aesthetic) -->
+        <!-- Decorative glowing orbital arc (adapts dynamically to active theme) -->
         <svg class="hero-orbit" viewBox="0 0 430 420" fill="none" aria-hidden="true">
           <ellipse
             cx="330"
@@ -56,13 +83,13 @@
             ry="195"
             stroke="url(#orbitGrad)"
             stroke-width="1.4"
-            opacity="0.7"
+            opacity="0.72"
           />
           <defs>
             <linearGradient id="orbitGrad" x1="140" y1="60" x2="420" y2="390" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.85" />
-              <stop offset="55%" stop-color="#FF8C2E" stop-opacity="0.35" />
-              <stop offset="100%" stop-color="#FF6B00" stop-opacity="0" />
+              <stop offset="0%" class="orbit-stop-1" stop-opacity="0.88" />
+              <stop offset="55%" class="orbit-stop-2" stop-opacity="0.4" />
+              <stop offset="100%" class="orbit-stop-3" stop-opacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -336,7 +363,7 @@
                 <button type="button" class="btn-secondary-full" id="retryDistrictBtn">
                   ← Boshqa tuman tanlash
                 </button>
-                <a href="tel:+998901234567" class="btn-ghost-link" id="unsupportedCallLink">
+                <a href="tel:+998944792521" class="btn-ghost-link" id="unsupportedCallLink">
                   Katta obyekt uchun qo'ng'iroq qilish
                 </a>
               </div>
@@ -445,7 +472,7 @@
               </p>
               <div class="success-summary-box" id="successSummaryBox"></div>
               <div class="success-actions">
-                <a href="tel:+998901234567" class="btn-primary-full" id="successCallBtn">
+                <a href="tel:+998944792521" class="btn-primary-full" id="successCallBtn">
                   📞 Hozir qo'ng'iroq qilish
                 </a>
                 <button type="button" class="btn-secondary-full" id="resetQuizBtn">
@@ -767,18 +794,33 @@
     <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
       <div class="footer-brand">
-        <span class="brand-wordmark small"><span class="brand-q">Q</span>uulay</span>
-        <span class="brand-sub">eshik romlari</span>
+        <span class="brand-logo-row footer-logo-row">
+          <svg class="brand-mark-svg" viewBox="0 0 64 60" width="30" height="28" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="quulayMarkGradFoot" x1="4" y1="54" x2="60" y2="4" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#0E5B94" />
+                <stop offset="52%" stop-color="#1CA69A" />
+                <stop offset="100%" stop-color="#B3DC46" />
+              </linearGradient>
+            </defs>
+            <path d="M14 4h36c6.627 0 12 5.373 12 12v22c0 6.627-5.373 12-12 12H23.5L11.8 58.6c-1.1.8-2.6-.15-2.3-1.48L11.2 49.4C5.9 48.2 2 43.5 2 38V16C2 9.373 7.373 4 14 4Z" fill="url(#quulayMarkGradFoot)"/>
+            <path d="M19.5 27.5L28 35.8L45.5 18.2" stroke="#FFFFFF" stroke-width="6.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand-text-col">
+            <span class="brand-wordmark small">quulay</span>
+            <span class="brand-sub">eshik romlari</span>
+          </span>
+        </span>
       </div>
       <p class="footer-hours" id="footerHours">Har kuni 08:00 – 20:00</p>
-      <a href="tel:+998901234567" class="footer-phone" id="footerPhone">+998 90 123 45 67</a>
+      <a href="tel:+998944792521" class="footer-phone" id="footerPhone">+998 94 479 25 21</a>
       <p class="footer-copy">© 2026 Quulay eshik romlari. Barcha huquqlar himoyalangan.</p>
     </footer>
   </div>
 
   <!-- ==================== STICKY BOTTOM MOBILE CTA DOCK ==================== -->
   <div class="sticky-dock" id="stickyDock" aria-hidden="true">
-    <a href="tel:+998901234567" class="dock-call-btn" id="dockCallBtn" aria-label="Qo'ng'iroq qilish">
+    <a href="tel:+998944792521" class="dock-call-btn" id="dockCallBtn" aria-label="Qo'ng'iroq qilish">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
         <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
       </svg>

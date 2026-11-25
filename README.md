@@ -2,8 +2,10 @@
 
 Мобильный лендинг для **Quulay eshik romlari** (оригинальные ПВХ-окна, двери и балконные системы **Ekopen** + подоконники **Pimaş**).
 
-🌐 **Живая ссылка (Cloudflare, 24/7):**
-https://quulay-eshik-romlari.iqboliddintoirov0333.workers.dev
+🌐 **Основная ссылка (Cloudflare Pages, 24/7):**
+https://rom.quulay.uz
+
+Резервная ссылка: https://quulay-eshik-romlari.pages.dev
 
 ## Основные разделы
 - **Первый экран (mobile-first):** логотип `Quulay eshik romlari`, номер call-центра, оффер `BEPUL ZAMER + NARX JOYIDA HISOBLAB BERILADI`, 3D-витрина моделей на светящемся подиуме и плашки преимуществ.
