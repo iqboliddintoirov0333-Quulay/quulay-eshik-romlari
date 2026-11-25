@@ -149,11 +149,11 @@
       const rect = viewport.getBoundingClientRect();
       const nx = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
       const ny = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-      tiltBox.style.transform = `rotateY(${nx * 16}deg) rotateX(${-ny * 10}deg)`;
+      tiltBox.style.transform = `perspective(900px) rotateY(${nx * 16}deg) rotateX(${-ny * 10}deg)`;
     });
 
     const endInteraction = (e) => {
-      tiltBox.style.transform = "rotateY(0deg) rotateX(0deg)";
+      tiltBox.style.transform = "";
       if (!isDragging) return;
       isDragging = false;
       const dx = e.clientX - startX;
@@ -165,7 +165,7 @@
 
     viewport.addEventListener("pointerup", endInteraction);
     viewport.addEventListener("pointerleave", () => {
-      tiltBox.style.transform = "rotateY(0deg) rotateX(0deg)";
+      tiltBox.style.transform = "";
       isDragging = false;
     });
 
