@@ -1,0 +1,12 @@
+# Raw unused construction photos & unused videos
+photo_*.jpg
+video_2026-11-25_23-12-17 (3).mp4
+video_2026-11-25_23-12-17 (4).mp4
+video_2026-11-25_23-12-17 (6).mp4
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+.vscode/

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#060606" />
+  <title>Quulay eshik romlari — Bepul zamer + narx joyida hisoblab beriladi</title>
+  <meta
+    name="description"
+    content="Quulay eshik romlari — Original Ekopen PVX oyna, eshik va balkon romlari. Bepul zamer va joyida aniq narx hisoblab berish. 10 yil kafolat."
+  />
+
+  <!-- Fonts: Bold condensed display + clean modern UI sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Layers -->
+  <div class="page-bg-glow" aria-hidden="true"></div>
+
+  <div class="mobile-shell">
+    <!-- ==================== TOP HEADER ==================== -->
+    <header class="top-header">
+      <a href="#top" class="brand-lockup" aria-label="Quulay eshik romlari">
+        <span class="brand-wordmark">
+          <span class="brand-q">Q</span>uulay
+        </span>
+        <span class="brand-sub" id="brandSubtitle">eshik romlari</span>
+      </a>
+
+      <a href="tel:+998901234567" class="header-phone" id="headerPhone">
+        <span class="phone-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+          </svg>
+        </span>
+        <span class="phone-number-text" id="headerPhoneText">+998 90 123 45 67</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero-section">
+        <!-- Decorative glowing orbital arc (matches reference aesthetic) -->
+        <svg class="hero-orbit" viewBox="0 0 430 420" fill="none" aria-hidden="true">
+          <ellipse
+            cx="330"
+            cy="240"
+            rx="195"
+            ry="195"
+            stroke="url(#orbitGrad)"
+            stroke-width="1.4"
+            opacity="0.7"
+          />
+          <defs>
+            <linearGradient id="orbitGrad" x1="140" y1="60" x2="420" y2="390" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.85" />
+              <stop offset="55%" stop-color="#FF8C2E" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#FF6B00" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Stacked Display Headline -->
+        <h1 class="hero-headline">
+          <span class="hl-orange">BEPUL ZAMER +</span>
+          <span class="hl-orange">NARX JOYIDA</span>
+          <span class="hl-white">HISOBLAB BERILADI</span>
+        </h1>
+
+        <!-- 3D Showcase Podium Stage -->
+        <div class="stage-wrapper" id="heroStage">
+          <!-- Vertical Left Dots (like reference) -->
+          <div class="stage-dots" id="stageDots" role="tablist" aria-label="3D mahsulotlar">
+            <button type="button" class="stage-dot active" data-slide="0" aria-label="Panorama oyna 3D" role="tab" aria-selected="true"></button>
+            <button type="button" class="stage-dot" data-slide="1" aria-label="Ekopen eshik 3D" role="tab" aria-selected="false"></button>
+            <button type="button" class="stage-dot" data-slide="2" aria-label="Balkon tizimi 3D" role="tab" aria-selected="false"></button>
+            <button type="button" class="stage-dot" data-slide="3" aria-label="Qatlamli profil 3D" role="tab" aria-selected="false"></button>
+          </div>
+
+          <!-- Top-Right Dynamic Pill Badge -->
+          <div class="stage-badge" id="stageBadge">EKOPEN 3D</div>
+
+          <!-- Interactive 3D Floating Product Container -->
+          <div class="stage-viewport" id="stageViewport">
+            <div class="stage-glow-halo" aria-hidden="true"></div>
+
+            <div class="stage-3d-tilt" id="stageTilt">
+              <img
+                src="assets/images/hero-window-3d.jpg"
+                alt="Ekopen panorama PVX oyna 3D"
+                class="stage-product-img"
+                id="stageProductImg"
+                draggable="false"
+              />
+            </div>
+
+            <!-- Glowing Elliptical Podium (matches reference) -->
+            <div class="stage-podium" aria-hidden="true">
+              <div class="stage-podium-inner"></div>
+            </div>
+          </div>
+
+          <!-- Swipe hint & Model Name (like XIAOMI Xiaomi 18 Pro Max) -->
+          <div class="stage-caption">
+            <span class="stage-brand" id="stageBrand">EKOPEN</span>
+            <span class="stage-model" id="stageModel">Panorama oyna • Kalyonniy 2 qavat</span>
+          </div>
+
+          <div class="stage-controls-mini">
+            <button type="button" class="stage-nav-btn" id="prevSlideBtn" aria-label="Oldingi 3D model">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <span class="stage-hint-text">3D ko'rish uchun suring</span>
+            <button type="button" class="stage-nav-btn" id="nextSlideBtn" aria-label="Keyingi 3D model">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrolling Feature Pills (matches reference pills strip) -->
+        <div class="pills-marquee-wrap" aria-label="Afzalliklarimiz">
+          <div class="pills-track">
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>Bepul zamer</span>
+            </div>
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>Narx joyida hisoblanadi</span>
+            </div>
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>Original Ekopen profil</span>
+            </div>
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>2 qavatli kalyonniy oyna</span>
+            </div>
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>10 yil kafolat</span>
+            </div>
+            <div class="feature-pill">
+              <span class="pill-check" aria-hidden="true">✓</span>
+              <span>3–5 kunda o'rnatish</span>
+            </div>
+            <!-- Duplicated seamlessly for infinite smooth marquee -->
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>Bepul zamer</span>
+            </div>
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>Narx joyida hisoblanadi</span>
+            </div>
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>Original Ekopen profil</span>
+            </div>
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>2 qavatli kalyonniy oyna</span>
+            </div>
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>10 yil kafolat</span>
+            </div>
+            <div class="feature-pill" aria-hidden="true">
+              <span class="pill-check">✓</span>
+              <span>3–5 kunda o'rnatish</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PRIMARY CONVERSION & 6-STEP QUIZ CARD ==================== -->
+      <section class="quiz-section" id="quizSection">
+        <div class="quiz-card">
+          <div class="quiz-card-top">
+            <h2 class="quiz-cta-heading">
+              <span class="hl-orange">BEPUL ZAMERGA</span>
+              <span class="hl-white">YOZILING</span>
+              <span class="point-down" aria-hidden="true">👇</span>
+            </h2>
+
+            <button type="button" class="cta-banner-btn" id="focusQuizBtn">
+              <span>Ariza qoldirish — 1 daqiqa</span>
+              <span class="cta-pen-icon" aria-hidden="true">✍️</span>
+            </button>
+          </div>
+
+          <!-- Progress Header -->
+          <div class="quiz-progress-bar-wrap" id="quizProgressWrap">
+            <div class="quiz-progress-meta">
+              <button type="button" class="quiz-back-btn hidden" id="quizBackBtn">
+                ← Orqaga
+              </button>
+              <span class="quiz-step-label" id="quizStepLabel">Savol 1 / 6</span>
+            </div>
+            <div class="quiz-progress-track">
+              <div class="quiz-progress-fill" id="quizProgressFill" style="width: 16.6%"></div>
+            </div>
+          </div>
+
+          <!-- Quiz Dynamic Body -->
+          <div class="quiz-body" id="quizBody">
+            <!-- STEP 1: Nima o'rnatmoqchisiz? -->
+            <div class="quiz-step active" data-step="1">
+              <p class="quiz-subprompt">Bittasini tanlang</p>
+              <h3 class="quiz-question">1. Nima o'rnatmoqchisiz?</h3>
+              <div class="options-grid two-col">
+                <button type="button" class="option-card" data-field="product" data-value="Oyna">
+                  <span class="opt-icon" aria-hidden="true">
+                    <svg viewBox="0 0 28 28" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="22" height="20" rx="2"/>
+                      <line x1="14" y1="4" x2="14" y2="24"/>
+                      <line x1="3" y1="11" x2="25" y2="11"/>
+                    </svg>
+                  </span>
+                  <span class="opt-title">Oyna</span>
+                  <span class="opt-desc">Deraza va panorama</span>
+                </button>
+
+                <button type="button" class="option-card" data-field="product" data-value="Eshik">
+                  <span class="opt-icon" aria-hidden="true">
+                    <svg viewBox="0 0 28 28" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="6" y="3" width="16" height="22" rx="2"/>
+                      <rect x="9" y="6" width="10" height="9" rx="1"/>
+                      <circle cx="19" cy="17" r="1.2" fill="currentColor"/>
+                    </svg>
+                  </span>
+                  <span class="opt-title">Eshik</span>
+                  <span class="opt-desc">Kirish va ichki eshik</span>
+                </button>
+
+                <button type="button" class="option-card" data-field="product" data-value="Balkon">
+                  <span class="opt-icon" aria-hidden="true">
+                    <svg viewBox="0 0 28 28" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="4" width="22" height="19" rx="2"/>
+                      <line x1="10" y1="4" x2="10" y2="23"/>
+                      <line x1="18" y1="4" x2="18" y2="23"/>
+                      <line x1="2" y1="23" x2="26" y2="23"/>
+                    </svg>
+                  </span>
+                  <span class="opt-title">Balkon</span>
+                  <span class="opt-desc">Ayvon va vitraj</span>
+                </button>
+
+                <button type="button" class="option-card" data-field="product" data-value="Hammasi">
+                  <span class="opt-icon" aria-hidden="true">
+                    <svg viewBox="0 0 28 28" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 13L14 4l11 9"/>
+                      <path d="M6 11v12h16V11"/>
+                      <rect x="11" y="15" width="6" height="8"/>
+                    </svg>
+                  </span>
+                  <span class="opt-title">Hammasi</span>
+                  <span class="opt-desc">Butun uy uchun</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Obyekt turi -->
+            <div class="quiz-step" data-step="2">
+              <p class="quiz-subprompt">Obyekt holatini tanlang</p>
+              <h3 class="quiz-question">2. Obyekt turi qanday?</h3>
+              <div class="options-grid one-col">
+                <button type="button" class="option-row" data-field="objectType" data-value="Yangi uy">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">Yangi uy</strong>
+                      <small class="opt-desc">Yangi qurilayotgan hovli yoki kvartira</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+
+                <button type="button" class="option-row" data-field="objectType" data-value="Ta'mirlanayotgan">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">Ta'mirlanayotgan</strong>
+                      <small class="opt-desc">Kapital remont jarayonidagi obyekt</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+
+                <button type="button" class="option-row" data-field="objectType" data-value="Almashtirish">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">Almashtirish</strong>
+                      <small class="opt-desc">Eski romlarni yangisiga almashtirish</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Qaysi tumanda? (Dynamic from config.js + unsupported gate) -->
+            <div class="quiz-step" data-step="3">
+              <p class="quiz-subprompt">Xizmat ko'rsatish hududini tanlang</p>
+              <h3 class="quiz-question">3. Qaysi tumanda joylashgan?</h3>
+              <div class="options-grid district-grid" id="districtOptions">
+                <!-- Populated dynamically from QUULAY_CONFIG.serviceDistricts -->
+              </div>
+            </div>
+
+            <!-- UNSUPPORTED AREA SCREEN (when "Boshqa tuman / viloyat" selected) -->
+            <div class="quiz-step unsupported-screen" data-step="unsupported" id="unsupportedScreen">
+              <div class="unsupported-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-6-5.686-6-10a6 6 0 1112 0c0 4.314-6 10-6 10z"/>
+                  <line x1="9.5" y1="8.5" x2="14.5" y2="13.5"/>
+                  <line x1="14.5" y1="8.5" x2="9.5" y2="13.5"/>
+                </svg>
+              </div>
+              <h3 class="unsupported-title" id="unsupportedTitle">
+                Bu hududga hozircha xizmat ko'rsatmaymiz
+              </h3>
+              <p class="unsupported-desc" id="unsupportedDesc">
+                Hozirda bepul zamer va o'rnatish xizmatimiz faqat ko'rsatilgan xizmat hududlarida amal qiladi.
+              </p>
+              <div class="served-areas-chips" id="servedAreasChips"></div>
+              <div class="unsupported-actions">
+                <button type="button" class="btn-secondary-full" id="retryDistrictBtn">
+                  ← Boshqa tuman tanlash
+                </button>
+                <a href="tel:+998901234567" class="btn-ghost-link" id="unsupportedCallLink">
+                  Katta obyekt uchun qo'ng'iroq qilish
+                </a>
+              </div>
+            </div>
+
+            <!-- STEP 4: Qachon o'rnatmoqchisiz? -->
+            <div class="quiz-step" data-step="4">
+              <p class="quiz-subprompt">Rejangizni belgilang</p>
+              <h3 class="quiz-question">4. Qachon o'rnatmoqchisiz?</h3>
+              <div class="options-grid one-col">
+                <button type="button" class="option-row" data-field="timeline" data-value="Shu oyda">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">Shu oyda</strong>
+                      <small class="opt-desc">Tez orada bepul zamer kerak</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+
+                <button type="button" class="option-row" data-field="timeline" data-value="1-3 oy ichida">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">1–3 oy ichida</strong>
+                      <small class="opt-desc">Oldindan hisob-kitob qilib olmoqchiman</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+
+                <button type="button" class="option-row" data-field="timeline" data-value="Hozircha narx bilmoqchiman">
+                  <span class="opt-row-left">
+                    <span class="opt-bullet"></span>
+                    <span>
+                      <strong class="opt-title">Hozircha narx bilmoqchiman</strong>
+                      <small class="opt-desc">Mutaxassis maslahati va narx qiziqtiradi</small>
+                    </span>
+                  </span>
+                  <span class="opt-arrow">→</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 5: Ism -->
+            <div class="quiz-step" data-step="5">
+              <p class="quiz-subprompt">Sizga qanday murojaat qilaylik?</p>
+              <h3 class="quiz-question">5. Ismingizni kiriting</h3>
+              <div class="input-group">
+                <label for="leadNameInput" class="sr-only">Ismingiz</label>
+                <input
+                  type="text"
+                  id="leadNameInput"
+                  class="quiz-input"
+                  placeholder="Masalan: Azizbek"
+                  autocomplete="given-name"
+                  maxlength="50"
+                />
+                <p class="input-error hidden" id="nameError">Iltimos, ismingizni kiriting</p>
+              </div>
+              <button type="button" class="btn-primary-full" id="nameNextBtn">
+                Davom etish →
+              </button>
+            </div>
+
+            <!-- STEP 6: Telefon raqam → "Bepul zamerga yozilish" -->
+            <div class="quiz-step" data-step="6">
+              <p class="quiz-subprompt">Oxirgi qadam — usta siz bilan bog'lanadi</p>
+              <h3 class="quiz-question">6. Telefon raqamingiz</h3>
+
+              <div class="selection-summary-pills" id="selectionSummary"></div>
+
+              <div class="input-group">
+                <label for="leadPhoneInput" class="sr-only">Telefon raqamingiz</label>
+                <div class="phone-field-wrap">
+                  <span class="phone-prefix">+998</span>
+                  <input
+                    type="tel"
+                    id="leadPhoneInput"
+                    class="quiz-input phone-input"
+                    placeholder="(90) 123-45-67"
+                    inputmode="numeric"
+                    autocomplete="tel-national"
+                    maxlength="14"
+                  />
+                </div>
+                <p class="input-error hidden" id="phoneError">Telefon raqamni to'liq kiriting (9 ta raqam)</p>
+              </div>
+
+              <button type="button" class="btn-primary-full submit-glow" id="submitLeadBtn">
+                Bepul zamerga yozilish
+              </button>
+
+              <p class="privacy-note">
+                🔒 Ma'lumotlaringiz faqat bepul zamer va narx hisoblash uchun ishlatiladi
+              </p>
+            </div>
+
+            <!-- SUCCESS SCREEN -->
+            <div class="quiz-step success-screen" data-step="success" id="successScreen">
+              <div class="success-badge-icon" aria-hidden="true">✓</div>
+              <h3 class="success-title" id="successTitle">Arizangiz qabul qilindi!</h3>
+              <p class="success-desc">
+                Mutaxassisimiz <strong>15 daqiqa ichida</strong> siz bilan bog'lanib, bepul zamer vaqtini kelishib oladi va narxni joyida hisoblab beradi.
+              </p>
+              <div class="success-summary-box" id="successSummaryBox"></div>
+              <div class="success-actions">
+                <a href="tel:+998901234567" class="btn-primary-full" id="successCallBtn">
+                  📞 Hozir qo'ng'iroq qilish
+                </a>
+                <button type="button" class="btn-secondary-full" id="resetQuizBtn">
+                  Yangi ariza qoldirish
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 2: 3D MATERIALS LAYER BY LAYER ==================== -->
+      <section class="content-section" id="materialsSection">
+        <div class="section-head">
+          <span class="section-eyebrow">ICHKI TUZILISHI</span>
+          <h2 class="section-title">
+            MATERIALLAR <span class="hl-orange">QATLAMMA-QATLAM</span>
+          </h2>
+          <p class="section-subtitle">
+            Har bir qatlam issiqlik, sukunat va uzoq yillik mustahkamlik uchun ishlaydi. Nuqtalarni bosib tekshiring:
+          </p>
+        </div>
+
+        <!-- Mode Toggle: 3D Studio Cutaway vs Interactive 3D Layer Separator -->
+        <div class="mode-switch" role="tablist" aria-label="Ko'rinish rejimi">
+          <button type="button" class="mode-tab active" data-layer-mode="photo" role="tab" aria-selected="true">
+            3D Kesma rasmi
+          </button>
+          <button type="button" class="mode-tab" data-layer-mode="interactive" role="tab" aria-selected="false">
+            3D Qatlamlarni ajratish
+          </button>
+        </div>
+
+        <!-- MODE A: 3D Photorealistic Cutaway with Interactive Hotspots -->
+        <div class="layers-visual-card" id="layerPhotoView">
+          <div class="cutaway-stage">
+            <img
+              src="assets/images/layers-cutaway-3d.jpg"
+              alt="Ekopen PVX rom materiallari 3D qatlamlar kesmasi"
+              class="cutaway-img"
+              id="cutawayImg"
+            />
+            <!-- Interactive Pulsing Hotspots (calibrated precisely to layers-cutaway-3d.jpg) -->
+            <button type="button" class="hotspot active" data-layer="0" style="left: 19%; top: 52%;" aria-label="1-qatlam: 5 kamerali Ekopen PVX profil">
+              <span>1</span>
+            </button>
+            <button type="button" class="hotspot" data-layer="1" style="left: 59%; top: 82%;" aria-label="2-qatlam: Po'lat armatura karkas">
+              <span>2</span>
+            </button>
+            <button type="button" class="hotspot" data-layer="2" style="left: 60%; top: 46%;" aria-label="3-qatlam: 2 qavatli kalyonniy steklopaket">
+              <span>3</span>
+            </button>
+            <button type="button" class="hotspot" data-layer="3" style="left: 41%; top: 38%;" aria-label="4-qatlam: EPDM rezina zichlagich">
+              <span>4</span>
+            </button>
+            <button type="button" class="hotspot" data-layer="4" style="left: 77%; top: 32%;" aria-label="5-qatlam: Ko'p nuqtali metall furnitura">
+              <span>5</span>
+            </button>
+          </div>
+          <div class="cutaway-hint">Nuqtani bosing — qatlam xususiyatini ko'ring</div>
+        </div>
+
+        <!-- MODE B: Live Interactive 3D CSS Explodable Layers Stack -->
+        <div class="layers-visual-card hidden" id="layerInteractiveView">
+          <div class="explode-3d-stage" id="explode3dStage">
+            <div class="explode-stack" id="explodeStack">
+              <div class="ex-layer" data-layer="0">
+                <div class="ex-plate ex-pvc">
+                  <span class="ex-tag">1 • Ekopen 5-kamerali PVX</span>
+                </div>
+              </div>
+              <div class="ex-layer" data-layer="1">
+                <div class="ex-plate ex-steel">
+                  <span class="ex-tag">2 • 1.5 mm Po'lat armatura</span>
+                </div>
+              </div>
+              <div class="ex-layer" data-layer="2">
+                <div class="ex-plate ex-glass-a">
+                  <span class="ex-tag">3 • 2 qavat kalyonniy oyna</span>
+                </div>
+              </div>
+              <div class="ex-layer" data-layer="3">
+                <div class="ex-plate ex-epdm">
+                  <span class="ex-tag">4 • EPDM 2-kontur rezina</span>
+                </div>
+              </div>
+              <div class="ex-layer" data-layer="4">
+                <div class="ex-plate ex-hardware">
+                  <span class="ex-tag">5 • Metall furnitura</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="explode-slider-box">
+            <div class="explode-slider-head">
+              <span>Qatlamlarni 3D ajratish</span>
+              <strong id="explodePercent">80%</strong>
+            </div>
+            <input
+              type="range"
+              id="explodeRange"
+              class="explode-range"
+              min="0"
+              max="100"
+              value="80"
+              aria-label="3D qatlamlarni ajratish darajasi"
+            />
+          </div>
+        </div>
+
+        <!-- Active Layer Detail Panel -->
+        <div class="layer-detail-card" id="layerDetailCard">
+          <div class="layer-detail-head">
+            <span class="layer-num-badge" id="layerNumBadge">01</span>
+            <div>
+              <h3 class="layer-detail-title" id="layerDetailTitle">5 kamerali Ekopen PVX profili</h3>
+              <span class="layer-detail-spec" id="layerDetailSpec">70 mm qalinlik • UV quyoshdan himoya</span>
+            </div>
+          </div>
+          <p class="layer-detail-desc" id="layerDetailDesc">
+            Ko'p kamerali issiqlik izolyatsiyasi qishda sovuqni, yozda jaziramani ichkariga o'tkazmaydi. O'zbekiston iqlimiga mos — quyoshda sarg'aymaydi va shakli o'zgarmaydi.
+          </p>
+
+          <!-- Quick layer selector chips -->
+          <div class="layer-chips" id="layerChips">
+            <button type="button" class="layer-chip active" data-layer="0">1. PVX profil</button>
+            <button type="button" class="layer-chip" data-layer="1">2. Po'lat karkas</button>
+            <button type="button" class="layer-chip" data-layer="2">3. 2 qavat oyna</button>
+            <button type="button" class="layer-chip" data-layer="3">4. EPDM rezina</button>
+            <button type="button" class="layer-chip" data-layer="4">5. Furnitura</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 3: OUR WORKS IN 3D ==================== -->
+      <section class="content-section" id="worksSection">
+        <div class="section-head">
+          <span class="section-eyebrow">3D VIZUALIZATSIYA</span>
+          <h2 class="section-title">
+            BIZNING <span class="hl-orange">ISHLARIMIZ</span>
+          </h2>
+          <p class="section-subtitle">
+            Andijon bo'ylab bajargan haqiqiy obyektlarimizning toza 3D ko'rinishi va texnik ko'rsatkichlari:
+          </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="works-filter" id="worksFilter">
+          <button type="button" class="wf-btn active" data-filter="all">Barchasi</button>
+          <button type="button" class="wf-btn" data-filter="panorama">Panorama</button>
+          <button type="button" class="wf-btn" data-filter="eshik">Eshiklar</button>
+          <button type="button" class="wf-btn" data-filter="oyna">Oynalar</button>
+        </div>
+
+        <!-- 3D Works Cards Grid -->
+        <div class="works-grid" id="worksGrid">
+          <!-- Card 1: Asaka -->
+          <article class="work-card" data-category="panorama oyna">
+            <div class="work-media" data-zoom-img="assets/images/work-asaka-3d.jpg" data-zoom-title="Asaka tumani — Katta oshxona panorama romi">
+              <img src="assets/images/work-asaka-3d.jpg" alt="Asaka tumani katta panorama oshxona romi 3D vizualizatsiya" loading="lazy" />
+              <span class="work-loc-pill">📍 Asaka tumani</span>
+              <span class="work-3d-tag">3D</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">Katta panorama oshxona romi va kirish eshigi</h3>
+              <div class="work-specs">
+                <span>Ekopen Seriy</span>
+                <span>Kalyonniy 2 qavat</span>
+                <span>0.6 mm eshik oynasi</span>
+              </div>
+              <div class="work-actions">
+                <button type="button" class="work-cta-link" data-prefill-product="Oyna">
+                  Shunday narx bilish →
+                </button>
+                <button type="button" class="work-video-btn" data-video="video_2026-11-25_23-12-17.mp4" data-video-title="Asaka tumani — Jonli montaj videosi">
+                  ▶ Real video
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Izboskan -->
+          <article class="work-card" data-category="panorama eshik">
+            <div class="work-media" data-zoom-img="assets/images/work-izboskan-3d.jpg" data-zoom-title="Izboskan tumani — 2 xonali ayvon panorama oynalari">
+              <img src="assets/images/work-izboskan-3d.jpg" alt="Izboskan tumani 2 xonali ayvon panorama oynalari 3D vizualizatsiya" loading="lazy" />
+              <span class="work-loc-pill">📍 Izboskan tumani</span>
+              <span class="work-3d-tag">3D</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">2 xonali uy oldi ayvoni — keng vitraj tizimi</h3>
+              <div class="work-specs">
+                <span>Ekopen Oq</span>
+                <span>Katta panorama</span>
+                <span>Mustahkam profillar</span>
+              </div>
+              <div class="work-actions">
+                <button type="button" class="work-cta-link" data-prefill-product="Balkon">
+                  Shunday narx bilish →
+                </button>
+                <button type="button" class="work-video-btn" data-video="video_2026-11-25_23-12-17 (2).mp4" data-video-title="Izboskan tumani — Jonli montaj videosi">
+                  ▶ Real video
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Bo'taqora (Andijon) -->
+          <article class="work-card" data-category="eshik oyna">
+            <div class="work-media" data-zoom-img="assets/images/work-botaqora-3d.jpg" data-zoom-title="Andijon (Bo'taqora) — Jigarrang yong'oq eshik va derazalar">
+              <img src="assets/images/work-botaqora-3d.jpg" alt="Jigarrang yong'oq rangli Ekopen eshik va derazalar 3D vizualizatsiya" loading="lazy" />
+              <span class="work-loc-pill">📍 Andijon (Bo'taqora)</span>
+              <span class="work-3d-tag">3D</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">Jigarrang (yong'oq) eshik va tashqariga ochiluvchi romlar</h3>
+              <div class="work-specs">
+                <span>Ekopen Jigarrang</span>
+                <span>Seriy &amp; matoviy oyna</span>
+                <span>Aniq regulyovka</span>
+              </div>
+              <div class="work-actions">
+                <button type="button" class="work-cta-link" data-prefill-product="Eshik">
+                  Shunday narx bilish →
+                </button>
+                <button type="button" class="work-video-btn" data-video="IMG_0541.MOV" data-video-title="Jigarrang eshik va romlar — Jonli montaj">
+                  ▶ Real video
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Paxtaobod -->
+          <article class="work-card" data-category="oyna">
+            <div class="work-media" data-zoom-img="assets/images/work-paxtaobod-3d.jpg" data-zoom-title="Paxtaobod tumani — Ko'p tabaqali romlar + Pimaş podokonnik">
+              <img src="assets/images/work-paxtaobod-3d.jpg" alt="Paxtaobod tumani ko'p tabaqali Ekopen romlar va Pimas podokonnik 3D vizualizatsiya" loading="lazy" />
+              <span class="work-loc-pill">📍 Paxtaobod tumani</span>
+              <span class="work-3d-tag">3D</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-title">Ko'p tabaqali romlar + Pimaş podokonnik montaji</h3>
+              <div class="work-specs">
+                <span>Ekopen + Pimaş</span>
+                <span>Yumshoq mexanizm</span>
+                <span>Germetik montaj</span>
+              </div>
+              <div class="work-actions">
+                <button type="button" class="work-cta-link" data-prefill-product="Hammasi">
+                  Shunday narx bilish →
+                </button>
+                <button type="button" class="work-video-btn" data-video="video_2026-11-25_23-12-17 (5).mp4" data-video-title="Paxtaobod tumani — Jonli montaj videosi">
+                  ▶ Real video
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 4: PROFILE COLORS & TRUST ==================== -->
+      <section class="content-section" id="colorsSection">
+        <div class="section-head">
+          <span class="section-eyebrow">RANG VA USLUB</span>
+          <h2 class="section-title">
+            ENG OMMABOP <span class="hl-orange">RANGLAR</span>
+          </h2>
+        </div>
+
+        <div class="color-studio-card">
+          <div class="color-preview-bar" id="colorPreviewBar">
+            <div class="color-sample-frame theme-anthracite" id="colorSampleFrame">
+              <div class="csf-glass"></div>
+              <div class="csf-mullion"></div>
+              <div class="csf-handle"></div>
+            </div>
+            <div class="color-preview-info">
+              <span class="color-tag" id="colorTag">Eng ko'p tanlanadigan</span>
+              <h3 class="color-name" id="colorName">Seriy / Antratsit</h3>
+              <p class="color-desc" id="colorDesc">
+                Zamonaviy hi-tech hovli va kvartiralar uchun. Seriy tonirovkali kalyonniy oyna bilan mukammal moslashadi.
+              </p>
+            </div>
+          </div>
+
+          <div class="color-swatches" role="radiogroup" aria-label="Profil rangini tanlang">
+            <button type="button" class="swatch-btn active" data-color="anthracite" aria-checked="true" role="radio">
+              <span class="swatch-dot sw-anthracite"></span>
+              <span>Seriy / Antratsit</span>
+            </button>
+            <button type="button" class="swatch-btn" data-color="white" aria-checked="false" role="radio">
+              <span class="swatch-dot sw-white"></span>
+              <span>Oq klassik</span>
+            </button>
+            <button type="button" class="swatch-btn" data-color="walnut" aria-checked="false" role="radio">
+              <span class="swatch-dot sw-walnut"></span>
+              <span>Jigarrang</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Trust Stats Strip -->
+        <div class="stats-grid">
+          <div class="stat-box">
+            <strong class="stat-num">500+</strong>
+            <span class="stat-label">Tayyor obyektlar</span>
+          </div>
+          <div class="stat-box">
+            <strong class="stat-num">10 yil</strong>
+            <span class="stat-label">Rasmiy kafolat</span>
+          </div>
+          <div class="stat-box">
+            <strong class="stat-num">0 so'm</strong>
+            <span class="stat-label">Bepul zamer</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-wordmark small"><span class="brand-q">Q</span>uulay</span>
+        <span class="brand-sub">eshik romlari</span>
+      </div>
+      <p class="footer-hours" id="footerHours">Har kuni 08:00 – 20:00</p>
+      <a href="tel:+998901234567" class="footer-phone" id="footerPhone">+998 90 123 45 67</a>
+      <p class="footer-copy">© 2026 Quulay eshik romlari. Barcha huquqlar himoyalangan.</p>
+    </footer>
+  </div>
+
+  <!-- ==================== STICKY BOTTOM MOBILE CTA DOCK ==================== -->
+  <div class="sticky-dock" id="stickyDock" aria-hidden="true">
+    <a href="tel:+998901234567" class="dock-call-btn" id="dockCallBtn" aria-label="Qo'ng'iroq qilish">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+      </svg>
+    </a>
+    <button type="button" class="dock-cta-btn" id="dockCtaBtn">
+      Bepul zamerga yozilish →
+    </button>
+  </div>
+
+  <!-- ==================== LIGHTBOX / VIDEO MODAL ==================== -->
+  <div class="modal-backdrop hidden" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Ko'rinish</h3>
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Yopish">✕</button>
+      </div>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
