@@ -10,9 +10,6 @@ window.QUULAY_CONFIG = {
   phoneDisplay: "+998 94 479 25 21",
   phoneHref: "tel:+998944792521",
 
-  // Standart dizayn mavzusi: "orange" (1-dizayn) yoki "brand" (2-dizayn — logotip ranglari)
-  defaultTheme: "orange",
-
   // Ish vaqti
   workHours: "Har kuni 08:00 – 20:00",
 

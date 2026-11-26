@@ -722,52 +722,9 @@
       .replace(/'/g, "&#39;");
   }
 
-  /* ==================== 1B. DUAL-DESIGN THEME SWITCHER ==================== */
-  function initThemeSwitcher() {
-    const btns = Array.from(document.querySelectorAll("[data-set-theme]"));
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-
-    function applyTheme(themeName, persist) {
-      const valid = themeName === "brand" ? "brand" : "orange";
-      document.documentElement.setAttribute("data-theme", valid);
-      if (metaTheme) {
-        metaTheme.setAttribute("content", valid === "brand" ? "#030a10" : "#060606");
-      }
-      btns.forEach((btn) => {
-        const active = btn.dataset.setTheme === valid;
-        btn.classList.toggle("active", active);
-        btn.setAttribute("aria-pressed", String(active));
-      });
-      if (persist) {
-        try {
-          localStorage.setItem("quulay_theme", valid);
-        } catch (_) {}
-      }
-    }
-
-    // Priority: URL ?theme=brand|orange -> saved localStorage -> config defaultTheme
-    let initial = CFG.defaultTheme || "orange";
-    try {
-      const param = new URLSearchParams(window.location.search).get("theme");
-      const saved = localStorage.getItem("quulay_theme");
-      if (param === "brand" || param === "orange") {
-        initial = param;
-      } else if (saved === "brand" || saved === "orange") {
-        initial = saved;
-      }
-    } catch (_) {}
-
-    applyTheme(initial, false);
-
-    btns.forEach((btn) => {
-      btn.addEventListener("click", () => applyTheme(btn.dataset.setTheme, true));
-    });
-  }
-
   /* ==================== BOOT ==================== */
   document.addEventListener("DOMContentLoaded", () => {
     applyConfig();
-    initThemeSwitcher();
     initHero3D();
     initQuiz();
     initMaterialsLayers();

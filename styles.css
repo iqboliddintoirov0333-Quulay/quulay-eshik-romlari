@@ -1,67 +1,9 @@
 /* ==========================================================================
-   Quulay eshik romlari — Dual-Theme Mobile-First Luxury UI
-   Theme 1 ("orange"): Classic Black + Ekopen Orange (default)
-   Theme 2 ("brand"):  Quulay Logo Palette (Ocean Blue #0E5B94 -> Teal #1CA69A -> Lime #B3DC46)
+   Quulay eshik romlari — Mobile-First Luxury UI
+   Brand Palette: Ocean Blue (#0E5B94) -> Teal (#1CA69A) -> Lime (#B3DC46)
    ========================================================================== */
 
-:root,
-[data-theme="orange"] {
-  --bg-pure: #060606;
-  --bg-desktop: #020202;
-  --bg-shell: linear-gradient(180deg, #060606 0%, #090705 55%, #060606 100%);
-  --bg-glow-1: rgba(255, 106, 0, 0.14);
-  --bg-glow-2: rgba(255, 106, 0, 0.08);
-  --shell-border: rgba(255, 106, 0, 0.18);
-  --shell-shadow-glow: rgba(255, 106, 0, 0.09);
-
-  --accent: #ff6a00;
-  --accent-bright: #ff8224;
-  --accent-deep: #d94e00;
-  --accent-rgb: 255, 106, 0;
-  --accent-text-soft: #ffd3b3;
-  --accent-text-pill: #ffcfad;
-
-  --headline-grad: linear-gradient(180deg, #ff872b 0%, #ff5e00 100%);
-  --wordmark-grad: linear-gradient(135deg, #ff8528 0%, #ff5a00 100%);
-  --btn-grad: linear-gradient(180deg, #ff7b1c 0%, #ff5800 100%);
-  --badge-grad: linear-gradient(135deg, #ff7b1a 0%, #ff5900 100%);
-  --progress-grad: linear-gradient(90deg, #ff5900, #ff9933);
-
-  --orbit-c1: #ff6b00;
-  --orbit-c2: #ff8c2e;
-  --orbit-c3: #ff6b00;
-
-  --podium-rim: rgba(255, 110, 12, 0.85);
-  --podium-bg: radial-gradient(ellipse at center, rgba(22, 16, 12, 0.96) 0%, rgba(6, 6, 6, 0.98) 72%);
-  --podium-glow: rgba(255, 106, 0, 0.36);
-  --podium-inner: rgba(255, 106, 0, 0.16);
-
-  --pill-bg: linear-gradient(180deg, rgba(30, 20, 12, 0.9) 0%, rgba(14, 10, 7, 0.95) 100%);
-  --quiz-card-bg:
-    radial-gradient(360px 180px at 50% 0%, rgba(255, 106, 0, 0.16), transparent 70%),
-    linear-gradient(180deg, #130d08 0%, #0b0907 100%);
-  --surface-card: linear-gradient(180deg, #13100d 0%, #0d0b09 100%);
-  --surface-visual:
-    radial-gradient(280px 200px at 50% 45%, rgba(255, 106, 0, 0.14), transparent 72%),
-    #080706;
-  --dock-bg: rgba(14, 10, 7, 0.92);
-  --modal-bg: #120e0b;
-
-  --text-main: #ffffff;
-  --text-muted: #b5aba2;
-  --text-dim: #7f766f;
-  --success: #22c55e;
-  --danger: #ff4d4f;
-  --radius-xl: 24px;
-  --radius-lg: 18px;
-  --radius-md: 14px;
-  --radius-pill: 999px;
-  --font-display: "Barlow Condensed", "Impact", "Arial Narrow", sans-serif;
-  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-/* ==================== THEME 2: QUULAY LOGO PALETTE ==================== */
-[data-theme="brand"] {
+:root {
   --bg-pure: #030a10;
   --bg-desktop: #02060a;
   --bg-shell: linear-gradient(180deg, #040c13 0%, #071622 52%, #030a10 100%);
@@ -103,8 +45,17 @@
   --dock-bg: rgba(5, 17, 26, 0.93);
   --modal-bg: #081622;
 
+  --text-main: #ffffff;
   --text-muted: #a6bfc8;
   --text-dim: #6f8d99;
+  --success: #22c55e;
+  --danger: #ff4d4f;
+  --radius-xl: 24px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+  --font-display: "Barlow Condensed", "Impact", "Arial Narrow", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 *,
@@ -281,65 +232,6 @@ body {
   align-items: center;
   justify-content: center;
   color: #dce6ea;
-}
-
-/* ==================== COMPACT 2-DESIGN SWITCHER ==================== */
-.theme-switcher-bar {
-  display: flex;
-  justify-content: center;
-  padding: 4px 16px 4px;
-  position: relative;
-  z-index: 10;
-}
-
-.theme-switcher {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  backdrop-filter: blur(8px);
-}
-
-.theme-opt {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  border: none;
-  border-radius: var(--radius-pill);
-  padding: 5px 12px;
-  background: transparent;
-  color: var(--text-muted);
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.22s ease;
-}
-
-.theme-opt.active {
-  background: rgba(var(--accent-rgb), 0.22);
-  color: #ffffff;
-  box-shadow: inset 0 0 0 1px rgba(var(--accent-rgb), 0.65);
-}
-
-.ts-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.ts-dot-orange {
-  background: linear-gradient(135deg, #ff8828, #ff5500);
-  box-shadow: 0 0 8px rgba(255, 106, 0, 0.75);
-}
-
-.ts-dot-brand {
-  background: linear-gradient(135deg, #0e5b94 0%, #1ca69a 55%, #b3dc46 100%);
-  box-shadow: 0 0 8px rgba(28, 176, 154, 0.8);
 }
 
 /* ==================== HERO SECTION ==================== */
